@@ -1,4 +1,7 @@
-package be.mrtus.eventbus;
+package be.mrtus.eventbus.simple;
+
+import be.mrtus.eventbus.Event;
+import be.mrtus.eventbus.ReactingListener;
 
 public class OtherEventListener implements ReactingListener {
 

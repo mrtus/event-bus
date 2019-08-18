@@ -1,4 +1,6 @@
-package be.mrtus.eventbus;
+package be.mrtus.eventbus.simple;
+
+import be.mrtus.eventbus.Event;
 
 public class ListenerMethodNotFound extends RuntimeException {
 

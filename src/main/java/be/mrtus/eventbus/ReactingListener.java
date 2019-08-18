@@ -1,5 +1,6 @@
 package be.mrtus.eventbus;
 
+import be.mrtus.eventbus.simple.ListenerMethodNotFound;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;

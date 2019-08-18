@@ -1,5 +1,7 @@
-package be.mrtus.eventbus;
+package be.mrtus.eventbus.simple;
 
+import be.mrtus.eventbus.Event;
+import be.mrtus.eventbus.Listener;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;

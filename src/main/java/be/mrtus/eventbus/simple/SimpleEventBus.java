@@ -1,5 +1,8 @@
-package be.mrtus.eventbus;
+package be.mrtus.eventbus.simple;
 
+import be.mrtus.eventbus.Event;
+import be.mrtus.eventbus.EventBus;
+import be.mrtus.eventbus.Listener;
 import java.util.Set;
 
 /**

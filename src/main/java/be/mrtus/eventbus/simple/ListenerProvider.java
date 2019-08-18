@@ -1,4 +1,6 @@
-package be.mrtus.eventbus;
+package be.mrtus.eventbus.simple;
+
+import be.mrtus.eventbus.Listener;
 
 /**
  * An object that provides an instances of {@link Listener}
