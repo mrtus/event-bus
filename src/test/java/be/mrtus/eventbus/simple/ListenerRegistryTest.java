@@ -20,18 +20,6 @@ public class ListenerRegistryTest {
 	}
 
 	@Test
-	public void itShouldRegisterListener() {
-		Set<Class<? extends Listener<? extends Event>>> expected = new HashSet();
-		expected.add(TestEventListener.class);
-
-		this.registry.register(TestEvent.class, TestEventListener.class);
-
-		Set<Class<? extends Listener<? extends Event>>> actual = this.registry.get(TestEvent.class);
-
-		assertEquals(expected, actual);
-	}
-
-	@Test
 	public void itShouldRegisterListeners() {
 		Set<Class<? extends Listener<? extends Event>>> expected = new HashSet();
 		expected.add(TestEventListener.class);

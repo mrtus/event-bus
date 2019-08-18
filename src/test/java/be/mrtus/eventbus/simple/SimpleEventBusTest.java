@@ -1,6 +1,7 @@
 package be.mrtus.eventbus.simple;
 
 import be.mrtus.eventbus.Event;
+import java.util.Arrays;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -14,9 +15,9 @@ public class SimpleEventBusTest {
 
 	@BeforeEach
 	public void before() {
-		Registry registry = new ListenerRegistry();
-		registry.register(TestEvent.class, TestEventListener.class);
-		registry.register(OtherEvent.class, OtherEventListener.class);
+		ListenerRegistry registry = new ListenerRegistry();
+		registry.register(TestEvent.class, Arrays.asList(TestEventListener.class));
+		registry.register(OtherEvent.class, Arrays.asList(OtherEventListener.class));
 
 		this.provider = mock(ListenerProvider.class);
 

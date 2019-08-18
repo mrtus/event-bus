@@ -20,7 +20,6 @@ public class ListenerRegistry implements Registry {
 		return this.listeners.get(eventClass);
 	}
 
-	@Override
 	public void register(
 			Class<? extends Event> eventClass,
 			Collection<Class<? extends Listener<? extends Event>>> listeners
