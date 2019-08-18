@@ -9,5 +9,5 @@ import java.util.Set;
  */
 public interface Registry {
 
-	public Set<Class<? extends Listener<? extends Event>>> get(Class<? extends Event> eventClass);
+	public Set<Class<? extends Listener>> get(Class<? extends Event> eventClass);
 }

@@ -27,8 +27,7 @@ public class SimpleEventBus implements EventBus {
 	public <T extends Event> void publish(T event) {
 		Class<? extends Event> eventClass = event.getClass();
 
-		Set<Class<? extends Listener<? extends Event>>> listeners = this.registry.get(eventClass);
-
+		Set<Class<? extends Listener>> listeners = this.registry.get(eventClass);
 		listeners.stream()
 				.forEach(listenerClass -> {
 					Listener listener = this.provider.provide(listenerClass);

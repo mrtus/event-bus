@@ -26,7 +26,7 @@ public class ListenerRegistryTest {
 
 		this.registry.register(TestEvent.class, Arrays.asList(TestEventListener.class));
 
-		Set<Class<? extends Listener<? extends Event>>> actual = this.registry.get(TestEvent.class);
+		Set<Class<? extends Listener>> actual = this.registry.get(TestEvent.class);
 
 		assertEquals(expected, actual);
 	}

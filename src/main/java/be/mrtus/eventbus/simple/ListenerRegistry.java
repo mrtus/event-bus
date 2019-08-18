@@ -13,10 +13,10 @@ import java.util.Set;
  */
 public class ListenerRegistry implements Registry {
 
-	private final Map<Class<? extends Event>, Set<Class<? extends Listener<? extends Event>>>> listeners = new HashMap<>();
+	private final Map<Class<? extends Event>, Set<Class<? extends Listener>>> listeners = new HashMap<>();
 
 	@Override
-	public Set<Class<? extends Listener<? extends Event>>> get(Class<? extends Event> eventClass) {
+	public Set<Class<? extends Listener>> get(Class<? extends Event> eventClass) {
 		return this.listeners.get(eventClass);
 	}
 
