@@ -2,9 +2,9 @@ package be.mrtus.eventbus;
 
 import be.mrtus.eventbus.TestEvent;
 import be.mrtus.eventbus.Event;
-import be.mrtus.eventbus.ReactingListener;
+import be.mrtus.eventbus.MethodNameBasedListener;
 
-public class OtherEventListener implements ReactingListener {
+public class OtherEventListener implements MethodNameBasedListener {
 
 	private Event event;
 

@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.List;
 
-public interface ReactingListener extends Listener<Event> {
+public interface MethodNameBasedListener extends Listener<Event> {
 
 	@Override
 	public default void handle(Event event) {
