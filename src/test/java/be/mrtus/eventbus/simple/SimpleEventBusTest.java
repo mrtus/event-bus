@@ -1,5 +1,9 @@
 package be.mrtus.eventbus.simple;
 
+import be.mrtus.eventbus.OtherEventListener;
+import be.mrtus.eventbus.TestEventListener;
+import be.mrtus.eventbus.OtherEvent;
+import be.mrtus.eventbus.TestEvent;
 import be.mrtus.eventbus.Event;
 import java.util.Arrays;
 import org.junit.jupiter.api.BeforeEach;

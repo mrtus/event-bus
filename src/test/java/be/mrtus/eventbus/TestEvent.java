@@ -1,4 +1,4 @@
-package be.mrtus.eventbus.simple;
+package be.mrtus.eventbus;
 
 import be.mrtus.eventbus.Event;
 

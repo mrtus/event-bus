@@ -1,9 +1,10 @@
-package be.mrtus.eventbus.simple;
+package be.mrtus.eventbus;
 
+import be.mrtus.eventbus.TestEvent;
 import be.mrtus.eventbus.Event;
 import be.mrtus.eventbus.ReactingListener;
 
-public final class TestEventListener implements ReactingListener {
+public class OtherEventListener implements ReactingListener {
 
 	private Event event;
 
@@ -13,5 +14,9 @@ public final class TestEventListener implements ReactingListener {
 
 	public void handleTestEvent(TestEvent event) {
 		this.event = event;
+	}
+
+	public boolean hasReactedToEvents() {
+		return this.getLastEvent() != null;
 	}
 }

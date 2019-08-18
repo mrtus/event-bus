@@ -1,5 +1,7 @@
 package be.mrtus.eventbus.simple;
 
+import be.mrtus.eventbus.TestEventListener;
+import be.mrtus.eventbus.TestEvent;
 import be.mrtus.eventbus.Event;
 import be.mrtus.eventbus.Listener;
 import java.util.Arrays;
