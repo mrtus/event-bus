@@ -22,7 +22,9 @@ abstract class AnnotationBasedListener implements Listener<Event> {
 
 		try {
 			method.invoke(this, event);
-		} catch(IllegalAccessException | IllegalArgumentException | InvocationTargetException exception) {
+		} catch(IllegalAccessException
+				| IllegalArgumentException
+				| InvocationTargetException exception) {
 			throw new ListenerMethodNotFound(exception);
 		}
 	}

@@ -19,7 +19,9 @@ public interface MethodNameBasedListener extends Listener<Event> {
 
 		try {
 			method.invoke(this, event);
-		} catch(IllegalAccessException | IllegalArgumentException | InvocationTargetException exception) {
+		} catch(IllegalAccessException
+				| IllegalArgumentException
+				| InvocationTargetException exception) {
 			throw new RuntimeException(exception);
 		}
 	}
