@@ -1,9 +1,5 @@
 package be.mrtus.eventbus;
 
-import be.mrtus.eventbus.TestEvent;
-import be.mrtus.eventbus.Event;
-import be.mrtus.eventbus.MethodNameBasedListener;
-
 public final class TestEventListener implements MethodNameBasedListener {
 
 	private Event event;
