@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-abstract class AnnotationBasedListener implements Listener<Event> {
+public abstract class AnnotationBasedListener implements Listener<Event> {
 
 	private final Map<Class<? extends Event>, Method> methods = new HashMap<>();
 
