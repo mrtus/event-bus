@@ -1,9 +1,9 @@
 package be.mrtus.eventbus.simple;
 
-import be.mrtus.eventbus.TestEventListener;
-import be.mrtus.eventbus.TestEvent;
 import be.mrtus.eventbus.Event;
 import be.mrtus.eventbus.Listener;
+import be.mrtus.eventbus.TestEvent;
+import be.mrtus.eventbus.TestEventListener;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -31,5 +31,12 @@ public class ListenerRegistryTest {
 		Set<Class<? extends Listener>> actual = this.registry.get(TestEvent.class);
 
 		assertEquals(expected, actual);
+	}
+
+	@Test
+	public void itShouldReturnEmptyListWhenNoListenersWereFoundForEvent() {
+		Set actual = this.registry.get(TestEvent.class);
+
+		assertTrue(actual.isEmpty());
 	}
 }

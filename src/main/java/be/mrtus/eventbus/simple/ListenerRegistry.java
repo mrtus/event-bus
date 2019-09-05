@@ -17,7 +17,7 @@ public class ListenerRegistry implements Registry {
 
 	@Override
 	public Set<Class<? extends Listener>> get(Class<? extends Event> eventClass) {
-		return this.listeners.get(eventClass);
+		return this.listeners.getOrDefault(eventClass, new HashSet<>());
 	}
 
 	public void register(
