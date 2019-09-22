@@ -6,7 +6,7 @@ import java.util.Queue;
 public class FinishFirstEventBus implements EventBus {
 
 	private final EventBus eventBus;
-	private boolean processing;
+	private boolean processingAnotherEvent;
 	private final Queue<Event> queue = new LinkedList<>();
 
 	public FinishFirstEventBus(
@@ -17,7 +17,7 @@ public class FinishFirstEventBus implements EventBus {
 
 	@Override
 	public <T extends Event> void publish(T event) {
-		if(this.isProcessingAnotherEvent()) {
+		if(this.processingAnotherEvent) {
 			this.store(event);
 
 			return;
@@ -29,7 +29,7 @@ public class FinishFirstEventBus implements EventBus {
 	}
 
 	public void release() {
-		this.processing = false;
+		this.processingAnotherEvent = false;
 
 		if(this.queue.isEmpty()) {
 			return;
@@ -39,13 +39,9 @@ public class FinishFirstEventBus implements EventBus {
 	}
 
 	private <T extends Event> void handle(T event) {
-		this.processing = true;
+		this.processingAnotherEvent = true;
 
 		this.eventBus.publish(event);
-	}
-
-	private boolean isProcessingAnotherEvent() {
-		return this.processing;
 	}
 
 	private <T extends Event> void store(T event) {
