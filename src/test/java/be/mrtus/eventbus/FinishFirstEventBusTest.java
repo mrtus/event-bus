@@ -54,9 +54,9 @@ public class FinishFirstEventBusTest {
 				.publish(sideEffectEventA);
 
 		inOrder.verify(this.delegate)
-				.publish(sideEffectEventB);
+				.publish(sideEffectEventC);
 
 		inOrder.verify(this.delegate)
-				.publish(sideEffectEventC);
+				.publish(sideEffectEventB);
 	}
 }
